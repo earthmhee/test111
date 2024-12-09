@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-boxs;
+}
+
+.container{
+    background-color: aquamarine;
+    width: 80%;
+    min-height: 300px;
+    padding: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4px;
+    flex-direction: row;
+    /* note : flex-flow = [flex-direction+flex-wrap] */
+    
+    /* flex-flow: column wrap-reverse; */
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    
+    /* note: align content use *ONLY* when text wrap is wrapped */
+    /* note: align-content: center; */
+
+}
+
+.item{
+    outline: 1px dashed red;
+    padding: 4px;
+    width: 150px;
+    /* note: when use flex, use flex-basis instead of width */
+    /* note: flex-basis = width of flex when use flex */
+    flex-basis: 150px;
+
+}
+
+.item02{
+    /* flex-shrink: 2;
+    flex-basis: 100px;
+    flex-grow: 1; */
+
+    flex: 1 2 90px;
+    align-self: center;
+
+    /* note: flex-grow = 1 = grow more till use up all space*/
+    /* note: if multiple use flexgrow = they will share until use all space */
+    /* note: number on flex grow/shrink = proportion */
+    /* note: flex-shrink = 0 = will not reduce space on its own */
+    /* note: default flex-grow:1 , flex-shrink:0 */
+}
+
+.item03{
+    /* flex-grow: 1; */
+    flex-shrink: 1;
+    align-self: flex-end;
+}
